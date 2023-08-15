@@ -1,0 +1,45 @@
+.like {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: url(../public/icon.png) no-repeat 0 0;
+    background-size: auto 80px;
+    cursor: pointer;
+}
+
+.like-rotate:hover {
+    animation-name: link-rotate-animation-keyframes;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    transform-origin: 25px 67px;
+}
+
+.like-active {
+    animation-name: like-active-animation-keyframes;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: steps(27);
+    animation-fill-mode: forwards;
+}
+
+@keyframes like-active-animation-keyframes {
+    to {
+        background-position: -2160px 0;
+        overflow: hidden
+    }
+}
+
+@keyframes link-rotate-animation-keyframes {
+    25% {
+        transform: rotate(6deg);
+    }
+
+    75% {
+        transform: rotate(-6deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
